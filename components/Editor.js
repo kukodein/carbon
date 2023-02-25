@@ -108,12 +108,10 @@ class Editor extends React.Component {
     const width = node.offsetWidth * exportSize
     const height = squared ? node.offsetWidth * exportSize : node.offsetHeight * exportSize
 
-    const transformOrigin = window.navigator.userAgent.indexOf('Safari') !== -1 ? '0 50%' : 'center'
-
     const config = {
       style: {
         transform: `scale(${exportSize})`,
-        'transform-origin': transformOrigin,
+        'transform-origin': 'center',
         background: squared ? this.state.backgroundColor : 'none',
       },
       filter: n => {
